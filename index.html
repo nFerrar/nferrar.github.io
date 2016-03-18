@@ -2,40 +2,42 @@
 <html>
 	<head>
 		<meta charset=utf-8>
-		<title>My first Three.js app</title>
+		<title>Nic's entirely tutorial based webpage.</title>
 		<style>
 			body { margin: 0; }
 			canvas { width: 100%; height: 100% }
 		</style>
 	</head>
 	<body>
+		<h1>Three.js? In my webpage?</h1>
+		<p>It's more likely than you think.</p>
 		<script src="js/three.min.js"></script>
 		<script>
 			var scene = new THREE.Scene();
-            var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
-            
-            var geometry = new THREE.BoxGeometry( 1, 1, 1 );
-            var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-            var cube = new THREE.Mesh( geometry, material );
-
-            var renderer = new THREE.WebGLRenderer();
-            
-            function render()
-            {
-	            requestAnimationFrame( render );
-	            cube.rotation.x += 0.1;
-                cube.rotation.y += 0.1;
-	            renderer.render( scene, camera );
-            }
-            
-            renderer.setSize( window.innerWidth, window.innerHeight );
-            document.body.appendChild( renderer.domElement );
-            
-            scene.add( cube );
-
-            camera.position.z = 5;
-            
-            render();
+		            var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
+		            
+		            var geometry = new THREE.BoxGeometry( 1, 1, 1 );
+		            var material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		            var cube = new THREE.Mesh( geometry, material );
+		
+		            var renderer = new THREE.WebGLRenderer();
+		            
+		            function render()
+		            {
+			            requestAnimationFrame( render );
+			            cube.rotation.x += 0.1;
+		                	cube.rotation.y += 0.1;
+			            renderer.render( scene, camera );
+		            }
+		            
+		            renderer.setSize( window.innerWidth, window.innerHeight );
+		            document.body.appendChild( renderer.domElement );
+		            
+		            scene.add( cube );
+		
+		            camera.position.z = 5;
+		            
+		            render();
 		</script>
 	</body>
 </html>
