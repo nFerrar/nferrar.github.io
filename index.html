@@ -21,13 +21,13 @@
 	                var material = new THREE.MeshBasicMaterial( { color: 0xff0000 } );
 		        var cube = new THREE.Mesh( geometry, material );
 		
-		        var 2geometry = new THREE.BoxGeometry( 1, 1, 1 );
-	                var 2material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
-		        var 2cube = new THREE.Mesh( 2geometry, 2material );
+		        var xgeometry = new THREE.BoxGeometry( 1, 1, 1 );
+	                var xmaterial = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+		        var xcube = new THREE.Mesh( xgeometry, xmaterial );
 		        
-		        var 3geometry = new THREE.BoxGeometry( 1, 1, 1 );
-	                var 3material = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
-		        var 3cube = new THREE.Mesh( 3geometry, 3material );
+		        var ygeometry = new THREE.BoxGeometry( 1, 1, 1 );
+	                var ymaterial = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
+		        var ycube = new THREE.Mesh( ygeometry, ymaterial );
 		
 		        var renderer = new THREE.WebGLRenderer();
 		            
@@ -36,10 +36,10 @@
 		            requestAnimationFrame( render );
 		            cube.rotation.x += 0.01;
 		            cube.rotation.y += 0.01;
-		            2cube.rotation.x -= 0.01;
-		            2cube.rotation.y -= 0.01;
-		            3cube.rotation.x += 0.01;
-		            3cube.rotation.y -= 0.01;
+		            xcube.rotation.x -= 0.01;
+		            xcube.rotation.y -= 0.01;
+		            ycube.rotation.x += 0.01;
+		            ycube.rotation.y -= 0.01;
 		            renderer.render( scene, camera );
 		        }
 		            
@@ -47,12 +47,12 @@
 	                document.body.appendChild( renderer.domElement );
 		            
 		        scene.add( cube );
-		        scene.add( 2cube );
-		        scene.add( 3cube );
+		        scene.add( xcube );
+		        scene.add( ycube );
 		
 		        camera.position.z = 5;
 		        cube.position.x = 2;
-		        3cube.position.x = -2;
+		        ycube.position.x = -2;
 		            
 		        render();
 		</script>
