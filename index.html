@@ -28,8 +28,6 @@
 		        var ygeometry = new THREE.BoxGeometry( 1, 1, 1 );
 	                var ymaterial = new THREE.MeshBasicMaterial( { color: 0x0000ff } );
 		        var ycube = new THREE.Mesh( ygeometry, ymaterial );
-		        
-		        var textGeo = new THREE.TextGeometry("Test")
 		
 		        var renderer = new THREE.WebGLRenderer();
 		            
@@ -52,12 +50,10 @@
 		        scene.add( cube );
 		        scene.add( xcube );
 		        scene.add( ycube );
-		        scene.add(textGeo);
 		
 		        camera.position.z = 5;
 		        cube.position.x = 2;
 		        ycube.position.x = -2;
-		        textGeo.position.y = 2;
 		            
 		        render();
 		</script>
